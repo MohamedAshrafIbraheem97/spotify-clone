@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // application endpoints
-import { ENDPOINTS } from './core/constants/endpoints';
+import { ENDPOINTS } from './data/Constants/endpoints';
 
 // Application Services
 import { UrlBuilder } from './core/services/url-builder.service';
