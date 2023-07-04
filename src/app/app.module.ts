@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { MainpageComponent } from './layout/mainpage/mainpage.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { SharedModule } from './shared/shared.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,7 @@ import { HeaderComponent } from './layout/header/header.component';
     HeaderComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CoreModule],
+  imports: [BrowserModule, AppRoutingModule, CoreModule, SharedModule, NoopAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
