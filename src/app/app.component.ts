@@ -6,6 +6,7 @@ import { ENDPOINTS } from './data/Constants/endpoints';
 // Application Services
 import { UrlBuilder } from './core/services/url-builder.service';
 import { ApiHttpService } from './core/services/api-http.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,13 @@ import { ApiHttpService } from './core/services/api-http.service';
 export class AppComponent implements OnInit {
   title = 'spotify-clone';
 
-  constructor(private apiHttpService: ApiHttpService) {}
+  constructor(
+    private apiHttpService: ApiHttpService,
+    public translate: TranslateService
+  ) {
+    this.translate.addLangs(['en', 'nl', 'ar']);
+    translate.setDefaultLang('ar');
+  }
   ngOnInit() {
     console.log(UrlBuilder.createUrl(ENDPOINTS.POSTS.allPosts));
     console.log(
@@ -30,5 +37,9 @@ export class AppComponent implements OnInit {
       .subscribe((post) => {
         console.log(post);
       });
+  }
+
+  switchLang(lang: string) {
+    this.translate.use(lang);
   }
 }
