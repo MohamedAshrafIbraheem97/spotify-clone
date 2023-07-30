@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // angular materia
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     FormsModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
+    MatButtonModule,
   ],
-  exports: [MatSlideToggleModule],
+  exports: [MatSlideToggleModule, MatButtonModule],
 })
 export class SharedModule {}

@@ -1,0 +1,146 @@
+// // theme.scss
+// // @import "@angular/material/theming";
+// // define 3 theme color
+// // mat-palette accepts $palette-name, main, lighter and darker variants
+// $my-theme-primary: mat-palette($mat-indigo, 700, 300, 900);
+// $my-theme-accent: mat-palette($mat-light-blue);
+// $my-theme-warn: mat-palette($mat-deep-orange, A200);
+
+$primary-color: #1db954;
+$secondary-color: #ffffff;
+$black-color: #191414;
+
+// styles used by the material components
+$primary-color-map: (
+  50: #e6f7ea,
+  100: #c3eacb,
+  200: #9cdcaa,
+  300: #71cf88,
+  400: #4cc46e,
+  500: #1db954,
+  600: #10aa4a,
+  700: #00973e,
+  800: #008633,
+  900: #00671e,
+  contrast: (
+    50: #ffffff,
+    100: #fafafa,
+    200: #f5f5f5,
+    300: #f0f0f0,
+    // 400: #91e3ae,
+    // 500: #6fd894,
+    // 600: #46cb75,
+    // 700: #2bcc63,
+    // 800: #1bc857,
+    // 900: #1db954,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  ),
+);
+
+$accent-color-map: (
+  50: #fbe6f4,
+  100: #f6c0e3,
+  200: #f497d1,
+  300: #f56bbd,
+  400: #f648aa,
+  500: #fb1d97,
+  600: #e81e91,
+  700: #d01e89,
+  800: #b91d82,
+  900: #911b77,
+  contrast: (
+    50: #ffffff,
+    100: #fafafa,
+    200: #f5f5f5,
+    300: #f0f0f0,
+    // 400: #91e3ae,
+    // 500: #6fd894,
+    // 600: #46cb75,
+    // 700: #2bcc63,
+    // 800: #1bc857,
+    // 900: #1db954,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  ),
+);
+
+$dark-color-map: (
+  50: #fdf6f6,
+  100: #f5eeee,
+  200: #eae3e3,
+  300: #d8d1d1,
+  400: #b3adad,
+  500: #938c8c,
+  600: #6b6565,
+  700: #575252,
+  800: #393434,
+  900: #191414,
+  contrast: (
+    50: #ffffff,
+    100: #fafafa,
+    200: #f5f5f5,
+    300: #f0f0f0,
+  ),
+);
+
+$warn-color-map: (
+  50: #ffeaec,
+  100: #ffcacd,
+  200: #f69590,
+  300: #ed6b65,
+  400: #f6473c,
+  500: #f93319,
+  600: #eb251c,
+  700: #d91616,
+  800: #cd070d,
+  900: #bf0000,
+  contrast: (
+    50: #ffffff,
+    100: #fafafa,
+    200: #f5f5f5,
+    300: #f0f0f0,
+    // 400: #91e3ae,
+    // 500: #6fd894,
+    // 600: #46cb75,
+    // 700: #2bcc63,
+    // 800: #1bc857,
+    // 900: #1db954,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  ),
+);
+
+// light palette map with complmentary color
+$light-palette-map-complementry: (
+  50: #e6f7ea,
+  100: #c3eacb,
+  200: #9cdcaa,
+  300: #71cf88,
+  400: #4cc46e,
+  500: #1db954,
+  600: #10aa4a,
+  700: #00973e,
+  800: #008633,
+  900: #00671e,
+  contrast: (
+    50: #fbe6f4,
+    100: #f6c0e3,
+    200: #f497d1,
+    300: #f56bbd,
+    400: #f648aa,
+    500: #fb1d97,
+    600: #e81e91,
+    700: #d01e89,
+    800: #b91d82,
+    900: #911b77,
+    // ... continues to 900,,,,,,,,,,
+  ),
+);
+
+// this is my styles
+$light-theme-map: (
+  name: "light theme",
+  text-color: $black-color,
+  background-color: $secondary-color,
+);
+
+$dark-theme-map: (
+  name: "dark theme",
+  text-color: $secondary-color,
+  background-color: $black-color,
+);

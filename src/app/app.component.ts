@@ -8,6 +8,11 @@ import { UrlBuilder } from './core/services/url-builder.service';
 import { ApiHttpService } from './core/services/api-http.service';
 import { TranslateService } from '@ngx-translate/core';
 
+enum THEME {
+  LIGHT = 'light-theme',
+  DARK = 'dark-theme',
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,6 +29,9 @@ export class AppComponent implements OnInit {
     translate.setDefaultLang('ar');
   }
   ngOnInit() {
+    let theme = THEME.DARK;
+    document.body.classList.add(theme);
+
     console.log(UrlBuilder.createUrl(ENDPOINTS.POSTS.allPosts));
     console.log(
       UrlBuilder.createUrlWithQueryParameters('comments', [
@@ -32,11 +40,10 @@ export class AppComponent implements OnInit {
     );
     console.log(UrlBuilder.createUrlWithPathVariables('posts', ['1']));
 
-    this.apiHttpService
-      .get(UrlBuilder.createUrl(ENDPOINTS.POSTS.allPosts))
-      .subscribe((post) => {
-        console.log(post);
-      });
+    this.apiHttpService.get(UrlBuilder.createUrl(ENDPOINTS.POSTS.allPosts));
+    // .subscribe((post) => {
+    //   console.log(post);
+    // });
   }
 
   switchLang(lang: string) {
